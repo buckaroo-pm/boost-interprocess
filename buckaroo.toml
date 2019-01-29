@@ -1,0 +1,25 @@
+targets = [ "//:interprocess" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-config"
+version = "branch=master"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-container"
+version = "branch=master"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-core"
+version = "branch=master"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-date_time"
+version = "branch=master"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-intrusive"
+version = "branch=master"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/boost-move"
+version = "branch=master"

@@ -1,0 +1,42 @@
+prebuilt_cxx_library(
+  name = 'pthread',
+  header_only = True,
+  exported_linker_flags = [
+    '-lpthread',
+  ],
+)
+
+prebuilt_cxx_library(
+  name = 'rt',
+  header_only = True,
+  exported_linker_flags = [
+    '-lrt',
+  ],
+)
+
+cxx_binary(
+  name = 'doc-map',
+  srcs = [
+    'doc_map.cpp',
+  ],
+  deps = [
+    '//:interprocess',
+  ],
+  platform_deps = [
+    ('linux.*', [ ':pthread', ':rt' ]),
+  ],
+)
+
+
+cxx_binary(
+  name = 'doc-complex-map',
+  srcs = [
+    'doc_complex_map.cpp',
+  ],
+  deps = [
+    '//:interprocess',
+  ],
+  platform_deps = [
+    ('linux.*', [ ':pthread', ':rt' ]),
+  ],
+)
